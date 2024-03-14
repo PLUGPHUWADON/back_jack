@@ -9,6 +9,7 @@ const showcountscore = document.querySelector(".count > h2");
 const itemcpu = document.querySelectorAll(".item-cpu");
 const showcountscorecpu = document.querySelector(".count-cpu");
 const itemhidecpu = document.querySelector(".hideitem-cpu");
+const boxplayagain = document.querySelector(".boxplayagain");
 
 
 const arrnumber = ["A",2,3,4,5,6,7,8,9,10,10,10,10];
@@ -89,7 +90,9 @@ play.addEventListener("click",() => {
         showcountscorecpu.style.transform = "translateX(0)";
     },1200);
     
-    checkscoreplay();
+    control.addEventListener("transitionend",() => {
+        checkscoreplay();
+    });
 });
 
 //!script player
@@ -193,9 +196,13 @@ function checkscoreplay() {
 
         if (countscore > countscorecpu) {
             console.log("player win");
+            boxplayagain.style.display = "flex";
+            boxplayagain.children[1].innerHTML = "player win"
         }
         else {
             console.log("cpu win");
+            boxplayagain.style.display = "flex";
+            boxplayagain.children[1].innerHTML = "cpu win";
         }
     }
 }

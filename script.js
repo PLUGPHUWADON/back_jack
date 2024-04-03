@@ -30,8 +30,8 @@ play.addEventListener("click",() => {
 
 //click play again
 clickplayagain.addEventListener("click",() => {
-    control.style.transform = "translateX(500px)";
-    showcountscorecpu.style.transform = "translateX(500px)";
+    control.style.transform = "translateX(900px)";
+    showcountscorecpu.style.transform = "translateX(900px)";
     boxplayagain.style.display = "none";
     items[0].classList.remove("addani");
     itemcpu[0].classList.remove("addani");

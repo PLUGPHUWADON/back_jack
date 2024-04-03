@@ -251,6 +251,31 @@ main .boxbottom .control .stand{
     color: #fff;
     font-weight: bold;
     background-color: red;
+    display: grid;
+    place-items: center;
+}
+
+main .boxbottom .control .stand > span{
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 5px solid transparent;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    animation: aniload 2s infinite linear;
+}
+@keyframes aniload {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 main .boxbottom .control .hit{
